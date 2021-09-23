@@ -1,6 +1,6 @@
 # Design patterns
 
-Creational:
+### Creational:
 
 - [x] Singleton
 - [x] Factory Method
@@ -9,7 +9,7 @@ Creational:
 - [ ] Prototype
 - [ ] Object Pool
 
-Structural:
+### Structural:
 
 - [ ] Adapter
 - [ ] Bridge
@@ -20,7 +20,7 @@ Structural:
 - [ ] Private Class Data
 - [ ] Proxy
 
-Behavioral:
+### Behavioral:
 
 - [ ] Chain of Responsibility
 - [ ] Command
