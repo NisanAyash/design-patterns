@@ -1,7 +1,8 @@
 // Creational Patterns
 import Singleton from "./src/creational/Singleton";
 import FactoryMethod from "./src/creational/FactoryMethod";
-
+// Behavioral Patterns
+import NumbersIterator from "./src/behavioral/Iterator";
 // Structural Patterns
 import { Subject, SubjectProxy } from "./src/structural/Proxy";
 console.log("=== *** CREATIONAL PATTERNS *** ====");
@@ -20,6 +21,14 @@ const s2 = factory.getService("service-b");
 
 console.log(s1.getName());
 console.log(s2.getName());
+
+console.log("=== *** BEHAVIORAL PATTERNS *** ====");
+
+const numbersIterator = new NumbersIterator([1, 2, 3, 4, 5]);
+const iterator = numbersIterator.createIterator();
+console.log("Iterator: ", iterator);
+console.log("next", iterator.next());
+console.log("hasNext", iterator.hasNext());
 
 console.log("=== *** STRUCTURAL PATTERNS *** ====");
 

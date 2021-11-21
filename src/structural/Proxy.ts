@@ -1,7 +1,6 @@
 // Proxy
 
 // Definition (Wikipedia):
-// the proxy pattern is a software design pattern.
 // A proxy, in its most general form,
 // is a class functioning as an interface to something else.
 // The proxy could interface to anything: a network connection,

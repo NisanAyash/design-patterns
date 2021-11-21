@@ -18,12 +18,13 @@
 - [ ] Facade
 - [ ] Flyweight
 - [ ] Private Class Data
-- [ ] Proxy
+- [x] Proxy
 
 ### Behavioral:
 
 - [ ] Chain of Responsibility
 - [ ] Command
+- [ ] Iterator
 - [ ] Interpreter
 - [ ] Mediator
 - [ ] Memento
