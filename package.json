@@ -1,0 +1,26 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "- [x] Singleton\r - [x] Factory Method\r - [ ] Abstract Factory\r - [ ] Builder\r - [ ] Prototype\r - [ ] Object Pool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NisanAyash/design-patterns.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NisanAyash/design-patterns/issues"
+  },
+  "homepage": "https://github.com/NisanAyash/design-patterns#readme",
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}

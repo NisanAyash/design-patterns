@@ -1,16 +1,14 @@
 {
-    "compilerOptions": {
-      "strict": true,
-      "module": "commonjs",
-      "jsx": "preserve",
-      "esModuleInterop": true,
-      "sourceMap": true,
-      "allowJs": true,
-      "lib": [
-        "es6",
-        "dom"
-      ],
-      "rootDir": "src",
-      "moduleResolution": "node"
-    }
-  }
+  "compilerOptions": {
+    "lib": [
+      "ES6","DOM"
+    ],
+    "target": "ES6",
+    "noImplicitAny": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

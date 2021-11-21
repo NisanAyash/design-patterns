@@ -12,14 +12,15 @@
 //  overridden by derived classes—rather than by
 //  calling a constructor.
 
-enum Services {
-  ServiceA = "service-a",
-  ServiceB = "service-b",
-  DefaultService = "default-service",
+enum SERVICES {
+  SERVICE_A = "SERVICE_A",
+  SERVICE_B = "SERVICE_B",
 }
 
 class ServiceA {
-  name: string = Services.ServiceA;
+  name: string = "SERVICE_A";
+
+  constructor() {}
 
   getName(): string {
     return this.name;
@@ -27,7 +28,9 @@ class ServiceA {
 }
 
 class ServiceB {
-  name: string = Services.ServiceB;
+  name: string = "SERVICE_B";
+
+  constructor() {}
 
   getName(): string {
     return this.name;
@@ -39,12 +42,12 @@ class ServicesFactory {
 
   getService(service: string) {
     switch (service) {
-      case Services.ServiceA:
+      case SERVICES.SERVICE_A:
         return new ServiceA();
-      case Services.ServiceB:
+      case SERVICES.SERVICE_B:
         return new ServiceB();
       default:
-        return Services.DefaultService;
+        return new ServiceA();
     }
   }
 }
