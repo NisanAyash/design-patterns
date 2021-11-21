@@ -4,6 +4,7 @@ import NumbersIterator from "./src/behavioral/Iterator";
 import { Observable, Observer } from "./src/behavioral/Observer";
 import { Subject, SubjectProxy } from "./src/structural/Proxy";
 import ChargeBatteryAdapter from "./src/structural/Adapter";
+import ConcreteDecorator, { Component } from "./src/structural/Decorator";
 
 console.log("=== *** CREATIONAL PATTERNS *** ====");
 
@@ -54,6 +55,11 @@ console.log("PROXY: ");
 console.log({ subject: subject.action(), proxySubject: proxySubject.action() });
 
 console.log("ADAPTER: ");
-const androidDevice = new ChargeBatteryAdapter();
-androidDevice.charge("ANDROID");
-androidDevice.charge("IPHONE");
+const device = new ChargeBatteryAdapter();
+device.charge("ANDROID");
+device.charge("IPHONE");
+
+console.log("DECORATOR: ");
+const component = new Component("App");
+const decorator = new ConcreteDecorator(component);
+decorator.render();

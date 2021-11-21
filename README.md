@@ -14,7 +14,7 @@
 - [x] Adapter
 - [ ] Bridge
 - [ ] Composite
-- [ ] Decorator
+- [x] Decorator
 - [ ] Facade
 - [ ] Flyweight
 - [ ] Private Class Data
