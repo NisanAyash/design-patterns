@@ -23,7 +23,7 @@ class Singleton {
         Business Logic...
   
   
-    */
+  */
 }
 
 export default Singleton;
