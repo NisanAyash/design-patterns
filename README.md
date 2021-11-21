@@ -11,7 +11,7 @@
 
 ### Structural:
 
-- [ ] Adapter
+- [x] Adapter
 - [ ] Bridge
 - [ ] Composite
 - [ ] Decorator
@@ -24,12 +24,12 @@
 
 - [ ] Chain of Responsibility
 - [ ] Command
-- [ ] Iterator
+- [x] Iterator
 - [ ] Interpreter
 - [ ] Mediator
 - [ ] Memento
 - [ ] Null Object
-- [ ] Observer
+- [x] Observer
 - [ ] State
 - [ ] Strategy
 - [ ] Template method
