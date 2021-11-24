@@ -12,7 +12,7 @@
 ### Structural:
 
 - [x] Adapter
-- [ ] Bridge
+- [x] Bridge
 - [ ] Composite
 - [x] Decorator
 - [ ] Facade

@@ -11,6 +11,8 @@ import {
   AdvancedRemoteControl,
 } from "./src/structural/Bridge";
 
+import Facade from "./src/structural/Facade";
+
 console.log("=== *** CREATIONAL PATTERNS *** ====");
 
 console.log("SINGLETON: ");
@@ -81,3 +83,9 @@ remote.volumeUp();
 console.log("volume: ", tv.getVolume());
 advancedRemote.mute();
 console.log("volume: ", tv.getVolume());
+
+console.log("FACADE: ");
+const facade = new Facade();
+
+facade.operation1();
+facade.operation2();
