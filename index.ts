@@ -5,6 +5,11 @@ import { Observable, Observer } from "./src/behavioral/Observer";
 import { Subject, SubjectProxy } from "./src/structural/Proxy";
 import ChargeBatteryAdapter from "./src/structural/Adapter";
 import ConcreteDecorator, { Component } from "./src/structural/Decorator";
+import {
+  Tv,
+  RemoteControl,
+  AdvancedRemoteControl,
+} from "./src/structural/Bridge";
 
 console.log("=== *** CREATIONAL PATTERNS *** ====");
 
@@ -63,3 +68,16 @@ console.log("DECORATOR: ");
 const component = new Component("App");
 const decorator = new ConcreteDecorator(component);
 decorator.render();
+
+console.log("BRIDGE: ");
+
+const tv = new Tv();
+const remote = new RemoteControl(tv);
+const advancedRemote = new AdvancedRemoteControl(tv);
+
+console.log("volume: ", tv.getVolume());
+remote.volumeUp();
+remote.volumeUp();
+console.log("volume: ", tv.getVolume());
+advancedRemote.mute();
+console.log("volume: ", tv.getVolume());
