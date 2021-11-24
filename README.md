@@ -15,7 +15,7 @@
 - [x] Bridge
 - [ ] Composite
 - [x] Decorator
-- [ ] Facade
+- [x] Facade
 - [ ] Flyweight
 - [ ] Private Class Data
 - [x] Proxy
