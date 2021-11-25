@@ -4,33 +4,33 @@
 
 - [x] Singleton
 - [x] Factory Method
+- [x] Prototype
 - [ ] Abstract Factory
-- [ ] Builder
-- [ ] Prototype
 - [ ] Object Pool
+- [ ] Builder
 
 ### Structural:
 
 - [x] Adapter
 - [x] Bridge
-- [ ] Composite
 - [x] Decorator
 - [x] Facade
+- [x] Proxy
+- [ ] Composite
 - [ ] Flyweight
 - [ ] Private Class Data
-- [x] Proxy
 
 ### Behavioral:
 
-- [ ] Chain of Responsibility
-- [ ] Command
 - [x] Iterator
-- [ ] Interpreter
-- [ ] Mediator
-- [ ] Memento
-- [ ] Null Object
 - [x] Observer
-- [ ] State
+- [ ] Momento
 - [ ] Strategy
+- [ ] Interpreter
+- [ ] State
+- [ ] Mediator
+- [ ] Null Object
 - [ ] Template method
+- [ ] Command
 - [ ] Visitor
+- [ ] Chain of Responsibility
