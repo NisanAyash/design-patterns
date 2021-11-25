@@ -33,6 +33,9 @@ export default () => {
     document.details === documentClone.details
   );
 
-  console.log("document", document);
-  console.log("documentClone", documentClone);
+  documentClone.file = "plain-copy.txt";
+
+  const files = [document, documentClone];
+
+  console.log("Two different files in array", files);
 };
