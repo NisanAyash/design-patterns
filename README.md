@@ -7,6 +7,8 @@ $ npx ts-node src/design-patterns/behavioral/Observer.ts
 ```
 ## Data Structures
 - [x] Stack
+- [x] Queue
+- [x] Priority Queue
 
 ## Design patterns
 ### Creational:
