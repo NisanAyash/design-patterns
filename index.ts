@@ -1,6 +1,12 @@
-import Structural from "./src/structural/index";
-import Creational from "./src/creational/index";
-import Behavioral from "./src/behavioral/index";
+// Data Structure
+
+// Algorithms
+
+// Design Patterns
+
+import Structural from "./src/design-patterns/structural/index";
+import Creational from "./src/design-patterns/creational/index";
+import Behavioral from "./src/design-patterns/behavioral/index";
 
 Structural();
 Creational();
