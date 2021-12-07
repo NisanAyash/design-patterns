@@ -16,7 +16,10 @@ class Stack {
   }
 
   /**
-   * return remove job from the stack by LIFO methodology (Last-In-First-Out)
+   * Remove the last item from the stack by
+   * LIFO Methodology (Last in First Out)
+   * @returns the last element in the stack
+   *
    */
   pop() {
     if (this.count === 0) return undefined;
@@ -32,7 +35,9 @@ class Stack {
   }
 
   /**
-   * return the last job of the stack
+   * LIFO Methodology (Last in First Out)
+   * @returns the last element in the stack
+   *
    */
   peek() {
     return this.storage[this.count - 1];
@@ -41,11 +46,11 @@ class Stack {
 
 const stack = new Stack();
 
-stack.push(() => "job 1");
-stack.push(() => "job 2");
-stack.push(() => "job 3");
-stack.push(() => "job 4");
-stack.push(() => "job 5");
+stack.push(() => "task 1");
+stack.push(() => "task 2");
+stack.push(() => "task 3");
+stack.push(() => "task 4");
+stack.push(() => "task 5");
 
 stack.pop();
 
