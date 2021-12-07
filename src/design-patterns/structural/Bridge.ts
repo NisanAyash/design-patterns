@@ -16,7 +16,7 @@ interface IRemoteControl {
   volumeDown(): void;
 }
 
-export class Tv implements Device {
+class Tv implements Device {
   private id: string;
   private on: boolean;
   private volume: number;
@@ -62,7 +62,7 @@ export class Tv implements Device {
   }
 }
 
-export class RemoteControl implements IRemoteControl {
+class RemoteControl implements IRemoteControl {
   protected device: Device;
 
   constructor(device: Device) {
@@ -92,7 +92,7 @@ export class RemoteControl implements IRemoteControl {
   }
 }
 
-export class AdvancedRemoteControl extends RemoteControl {
+class AdvancedRemoteControl extends RemoteControl {
   constructor(device: Device) {
     super(device);
   }
@@ -101,3 +101,14 @@ export class AdvancedRemoteControl extends RemoteControl {
     this.device.setVolume(0);
   }
 }
+
+const tv = new Tv();
+const remote = new RemoteControl(tv);
+const advancedRemote = new AdvancedRemoteControl(tv);
+
+console.log("volume: ", tv.getVolume());
+remote.volumeUp();
+remote.volumeUp();
+console.log("volume: ", tv.getVolume());
+advancedRemote.mute();
+console.log("volume: ", tv.getVolume());

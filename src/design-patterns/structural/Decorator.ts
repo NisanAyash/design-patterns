@@ -2,7 +2,7 @@ interface IComponent {
   render(): void;
 }
 
-export class Component implements IComponent {
+class Component implements IComponent {
   public name: string;
 
   constructor(name: string) {
@@ -40,4 +40,6 @@ class ConcreteDecorator extends Decorator {
   }
 }
 
-export default ConcreteDecorator;
+const component = new Component("App");
+const decorator = new ConcreteDecorator(component);
+decorator.render();

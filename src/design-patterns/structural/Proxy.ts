@@ -2,7 +2,7 @@ interface ISubject {
   action: () => string;
 }
 
-export class Subject implements ISubject {
+class Subject implements ISubject {
   private subject: string;
 
   constructor(subject: string) {
@@ -14,7 +14,7 @@ export class Subject implements ISubject {
   }
 }
 
-export class SubjectProxy implements ISubject {
+class SubjectProxy implements ISubject {
   private realSubject: ISubject;
   private s: string;
 
@@ -28,13 +28,17 @@ export class SubjectProxy implements ISubject {
     }
 
     /* 
-  
-  
         Business Logic...
-  
-  
     */
 
     return this.realSubject.action();
   }
 }
+
+const subject = new Subject("subject");
+const proxySubject = new SubjectProxy("subject");
+
+console.log({
+  subject: subject.action(),
+  proxySubject: proxySubject.action(),
+});

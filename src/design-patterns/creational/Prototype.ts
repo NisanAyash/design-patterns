@@ -7,7 +7,7 @@ interface Prototype {
   clone(): this;
 }
 
-export class Document implements Prototype {
+class _Document implements Prototype {
   public file: string;
   public details: IDetails;
 
@@ -31,3 +31,18 @@ export class Document implements Prototype {
     return clone;
   }
 }
+
+const _document = new _Document("plain.txt");
+const documentClone = _document.clone();
+
+console.log("document === documentClone ? ", _document === documentClone);
+console.log(
+  "document.details === documentClone.details ? ",
+  _document.details === documentClone.details
+);
+
+documentClone.file = "plain-copy.txt";
+
+const files = [_document, documentClone];
+
+console.log("Two different files in array", files);

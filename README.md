@@ -1,5 +1,14 @@
-# Design patterns
 
+`
+Example output:
+$ npx ts-node src/.../...
+$ npx ts-node src/data-structures/Stack.ts 
+$ npx ts-node src/design-patterns/behavioral/Observer.ts
+` 
+## Data Structures
+- [x] Stack
+
+## Design patterns
 ### Creational:
 
 - [x] Singleton

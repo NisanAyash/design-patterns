@@ -38,4 +38,9 @@ class NumbersIterator implements Aggregator {
   }
 }
 
-export default NumbersIterator;
+const numbersIterator = new NumbersIterator([1, 2, 3, 4, 5]);
+const iterator = numbersIterator.createIterator();
+
+console.log("Iterator: ", iterator);
+console.log("next", iterator.next());
+console.log("hasNext", iterator.hasNext());

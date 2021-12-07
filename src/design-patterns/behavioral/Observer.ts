@@ -9,7 +9,7 @@ interface IObserver {
   update: () => void;
 }
 
-export class Observable implements IObservable {
+class Observable implements IObservable {
   private observers: IObserver[] = [];
 
   constructor() {
@@ -29,7 +29,7 @@ export class Observable implements IObservable {
   }
 }
 
-export class Observer implements IObserver {
+class Observer implements IObserver {
   public id: number;
 
   constructor(id: number) {
@@ -40,3 +40,17 @@ export class Observer implements IObserver {
     console.log(`Observer ${this.id} is updating...`);
   }
 }
+
+const observable = new Observable();
+
+const observer1 = new Observer(1);
+const observer2 = new Observer(2);
+const observer3 = new Observer(3);
+
+observable.subscribe(observer1);
+observable.subscribe(observer2);
+observable.subscribe(observer3);
+
+observable.unsubscribe(2);
+
+observable.notify();

@@ -23,7 +23,7 @@ class ServiceB {
   }
 }
 
-class ServicesFactory {
+class FactoryMethod {
   constructor() {}
 
   getService(service: string) {
@@ -38,4 +38,9 @@ class ServicesFactory {
   }
 }
 
-export default ServicesFactory;
+const factory = new FactoryMethod();
+const service1 = factory.getService("SERVICE_A");
+const service2 = factory.getService("SERVICE_B");
+
+console.log(service1.getName());
+console.log(service2.getName());

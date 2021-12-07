@@ -39,4 +39,6 @@ class ChargeBatteryAdapter {
   }
 }
 
-export default ChargeBatteryAdapter;
+const device = new ChargeBatteryAdapter();
+device.charge("ANDROID");
+device.charge("IPHONE");
