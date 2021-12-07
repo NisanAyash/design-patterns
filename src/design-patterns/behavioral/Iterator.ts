@@ -7,7 +7,7 @@ interface Aggregator {
   createIterator: () => IIterator;
 }
 
-class _Iterator implements IIterator {
+export default class _Iterator implements IIterator {
   private collection: any[] = [];
   private index: number = 0;
 
