@@ -9,7 +9,7 @@ class _Node {
 
 class BinarySearchTree {
   private root: _Node = null
-  constructor() {}
+  constructor() { }
 
   add(data: number) {
     let node = this.root
@@ -131,6 +131,126 @@ class BinarySearchTree {
 
     this.root = removeNode(this.root, data)
   }
+
+  findMinDepth(node = this.root): any {
+    if (node === null) {
+      return -1
+    }
+
+    let left = this.findMinDepth(node.left);
+    let right = this.findMinDepth(node.right);
+
+    if (left < right) {
+      return left + 1;
+    } else {
+      return right + 1;
+    }
+
+  }
+
+  findMaxDepth(node = this.root): any {
+    if (node === null) {
+      return -1
+    }
+
+    let left = this.findMaxDepth(node.left)
+    let right = this.findMaxDepth(node.right);
+
+    if (left > right) {
+      return left + 1;
+    } else {
+      return right + 1;
+    }
+  }
+
+  isBalanced() {
+    return this.findMinDepth() >= (this.findMaxDepth() - 1)
+  }
+
+  inOrder(): any {
+    if (this.root === null) {
+      return null
+    } else {
+      const result: number[] = [];
+
+      const traverseInOrder = (node: any): any => {
+        node.left && traverseInOrder(node.left);
+        result.push(node.value);
+        node.right && traverseInOrder(node.right);
+      }
+
+
+      traverseInOrder(this.root);
+
+
+      return result;
+    }
+  }
+
+  preOrder() {
+    if (this.root === null) {
+      return null
+    } else {
+      const result: number[] = [];
+
+      const traversePreOrder = (node: any): any => {
+        result.push(node.value);
+        node.left && traversePreOrder(node.left);
+        node.right && traversePreOrder(node.right);
+      }
+
+
+      traversePreOrder(this.root);
+
+
+      return result;
+    }
+  }
+
+  postOrder() {
+    if (this.root === null) {
+      return null
+    } else {
+      const result: number[] = [];
+
+      const traversePostOrder = (node: any): any => {
+        node.left && traversePostOrder(node.left);
+        node.right && traversePostOrder(node.right);
+        result.push(node.value);
+      }
+
+
+      traversePostOrder(this.root);
+
+
+      return result;
+    }
+  }
+
+  levelOrder() {
+    const result = [];
+    const q = [];
+
+    if (this.root !== null) {
+      q.push(this.root);
+      while (q.length > 0) {
+        let node = q.shift();
+        result.push(node.value);
+
+        if (node.left !== null) {
+          q.push(node.left);
+        }
+        if (node.right !== null) {
+          q.push(node.right);
+        }
+      }
+
+      return result;
+    } else {
+      return null;
+    }
+
+  }
 }
 
 const bst = new BinarySearchTree()
@@ -173,9 +293,9 @@ console.log('has: ', bst.has(10))
 console.log('has: ', bst.has(87))
 console.log('has: ', bst.has(33))
 
-console.log('remove: ', bst.remove(1))
-console.log('remove: ', bst.remove(10))
-console.log('remove: ', bst.remove(99))
+// console.log('remove: ', bst.remove(1))
+// console.log('remove: ', bst.remove(10))
+// console.log('remove: ', bst.remove(99))
 
 console.log('has: ', bst.has(1))
 console.log('has: ', bst.has(10))
@@ -183,3 +303,12 @@ console.log('has: ', bst.has(99))
 
 console.log('min: ', bst.findMin()?.value)
 console.log('max: ', bst.findMax()?.value)
+
+console.log('min depth: ', bst.findMinDepth())
+console.log('max depth: ', bst.findMaxDepth())
+console.log('is balanced: ', bst.isBalanced())
+
+console.log('in order: ', bst.inOrder())
+console.log('pre order: ', bst.preOrder())
+console.log('post order: ', bst.postOrder())
+console.log('level order: ', bst.levelOrder())
