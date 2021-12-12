@@ -9,6 +9,9 @@ $ npx ts-node src/design-patterns/behavioral/Observer.ts
 - [x] Stack
 - [x] Queue
 - [x] Priority Queue
+- [x] Binary Search Tree
+- [x] Hash Tables
+- [x] Linked List
 
 ## Design patterns
 ### Creational:

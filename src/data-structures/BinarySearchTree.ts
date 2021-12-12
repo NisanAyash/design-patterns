@@ -293,9 +293,9 @@ console.log('has: ', bst.has(10))
 console.log('has: ', bst.has(87))
 console.log('has: ', bst.has(33))
 
-// console.log('remove: ', bst.remove(1))
-// console.log('remove: ', bst.remove(10))
-// console.log('remove: ', bst.remove(99))
+console.log('remove: ', bst.remove(1))
+console.log('remove: ', bst.remove(10))
+console.log('remove: ', bst.remove(99))
 
 console.log('has: ', bst.has(1))
 console.log('has: ', bst.has(10))
