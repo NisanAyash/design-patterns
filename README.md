@@ -1,21 +1,7 @@
 ```
-$ npx ts-node src/.../...
-
-$ npx ts-node src/data-structures/Stack.ts
-$ npx ts-node src/design-patterns/behavioral/Observer.ts
+$ npx ts-node src/<folder>/<file-name>.ts
+$ npx ts-node src/behavioral/Observer.ts
 ```
-
-## Data Structures
-
-- [x] Stack
-- [x] Queue
-- [x] Priority Queue
-- [x] Binary Search Tree
-- [x] Hash Tables
-- [x] Linked List
-- [x] Trie
-- [x] Heap
-- [x] BFS
 
 ## Design patterns
 
